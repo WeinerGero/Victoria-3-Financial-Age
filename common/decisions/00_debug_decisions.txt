@@ -1,0 +1,40 @@
+# Это решение подготовит игру к тесту мода.
+
+debug_setup_test_environment = {
+    category = debug_decisions
+    
+    # Этот блок определяет, кто может видеть решение.
+    # is_player = yes — критически важная строка, чтобы ИИ никогда не смог нажать эту кнопку.
+    potential = {
+        is_player = yes
+    }
+
+    # Этот блок определяет, что произойдет после нажатия.
+    effect = {
+        # Выдаем ключевые технологии для нашего мода
+        add_technology_researched = { technology = banking }
+        add_technology_researched = { technology = stock_exchange }
+        add_technology_researched = { technology = central_banking }
+        # Добавим и другие полезные технологии для ускорения
+        add_technology_researched = { technology = steelworking }
+        add_technology_researched = { technology = electricity }
+        add_technology_researched = { technology = telegraph }
+
+        # Добавляем деньги в казну, чтобы не думать о банкротстве во время тестов
+        add_treasury = 10000000
+
+        # Добавляем бюрократию для поддержки институтов
+        add_bureaucracy = 5000
+
+        # Строим 10 уровней нашего будущего здания "Финансовый центр" в столице.
+        # capital - это специальная область видимости (scope), указывающая на столичную область.
+        # ВАЖНО: Этот блок сработает только ПОСЛЕ того, как вы создадите здание 'financial_center' на Этапе 1.
+        # До этого момента его можно закомментировать (поставить # в начале строки).
+        capital = {
+            add_building_levels = {
+                building = financial_center
+                levels = 10
+            }
+        }
+    }
+}

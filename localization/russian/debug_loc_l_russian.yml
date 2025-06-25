@@ -1,0 +1,6 @@
+# Файл: localization/russian/debug_loc_l_russian.yml
+
+l_russian:
+ debug_decisions:0 "ИНСТРУМЕНТЫ ОТЛАДКИ"
+ debug_setup_test_environment:0 "[ОТЛАДКА] Подготовить тестовую среду"
+ debug_setup_test_environment_desc:0 "Мгновенно выдает все необходимые технологии, ресурсы и здания для начала тестирования механик мода Financial Overhaul. Активировать в начале игры."
