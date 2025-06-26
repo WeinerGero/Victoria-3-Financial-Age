@@ -1,0 +1,11 @@
+﻿# Файл: fa_pm_groups.txt (Версия 1.2)
+# Определяет нашу новую группу ПМ
+
+pmg_fa_banking_operations = {
+    texture = "gfx/interface/icons/production_method_icons/bakeries.dds" # Временная иконка
+    ai_selection = most_productive
+
+	production_methods = {
+		pm_commercial_banking
+	}
+}

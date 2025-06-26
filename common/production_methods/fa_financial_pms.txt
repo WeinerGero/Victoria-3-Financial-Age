@@ -1,0 +1,24 @@
+﻿# Файл: fa_financial_pms.txt (Версия 1.2)
+# Определяет наш новый ПМ и привязывает его к нашей новой группе
+
+pm_commercial_banking = {
+    # Явно указываем, в какую группу входит этот ПМ
+    # production_method_group = pmg_fa_banking_operations
+	is_default = yes
+
+    # Определяем потребление и производство
+    building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_paper_add = 10
+
+			# output goods
+			goods_output_services_add = 5
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 150
+			building_employment_capitalists_add = 100
+		}
+    }
+}
