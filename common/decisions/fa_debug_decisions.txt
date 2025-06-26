@@ -1,0 +1,59 @@
+﻿# Файл: fa_debug_decisions.txt
+# ВЕРСИЯ 4.0 - Правильное применение внешнего модификатора из папки static_modifiers
+
+fa_debug_setup_test_environment = {
+    is_shown = {
+        is_player = yes
+    }
+
+    possible = {
+        always = yes
+    }
+
+    when_taken = {
+        # --- Блок Ресурсов ---
+        add_treasury = 10000000
+
+        # --- Применяем наш модификатор по его имени ---
+        add_modifier = {
+            name = fa_super_debug_boost
+            months = 12000
+        }
+
+        # --- Блок Технологий ---
+        # Мы возвращаемся к этому эффекту, так как проблема была не в нем,
+        # а в ошибке с модификатором, которая ломала весь блок 'when_taken'.
+        
+        add_era_researched = era_1
+        add_era_researched = era_2
+        add_era_researched = era_3
+        add_era_researched = era_4
+        add_era_researched = era_5
+
+        # --- Блок ПОПов ---
+        add_loyalists = {
+            value = 1.0
+        }
+
+        every_scope_pop = {
+            set_pop_literacy = {
+                literacy_rate = {
+                    value = 0.99
+                }
+            }
+        }
+        
+    }
+        
+        # --- Блок Строительства (Остается закомментированным до Этапа 1) ---
+        # c:capital = {
+        #     add_building_levels = {
+        #         building = financial_center
+        #         add_levels = 10
+        #     }
+        # }
+
+    ai_chance = {
+        value = 0
+    }
+}
