@@ -1,0 +1,14 @@
+﻿# Файл: fa_debug_modifiers.txt
+# Определяет наш единый отладочный модификатор.
+# Находится в static_modifiers, как в рабочем примере.
+
+fa_super_debug_boost = {
+    icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+
+    # Атрибуты, которые мы хотим получить
+    country_bureaucracy_add = 100000
+    country_institution_size_change_speed_mult = 1.00
+    country_max_weekly_construction_progress_add = 100
+    country_company_construction_efficiency_bonus_add = 1.00
+    country_tech_research_speed_mult = 5.00
+}
